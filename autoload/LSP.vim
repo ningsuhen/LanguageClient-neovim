@@ -6,7 +6,7 @@ function! LSP#filename() abort
     if !l:filename
         let l:filename = expand('%:p')
     endif
-    return l:filename
+    return substitute(l:filename,'\/Volumes\/','\/','')
 endfunction
 
 " This function will return buffer text as required by LSP.
